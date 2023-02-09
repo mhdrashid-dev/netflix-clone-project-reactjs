@@ -13,7 +13,7 @@ function QuestionSec() {
     console.log(data);
 
   return (
-    <div className='w-full bg-black min-h-[60vh] py-5'>
+    <div className='w-full bg-black min-h-[80vh] py-5 border-b-8 border-[#616161]'>
         <div className="container mx-auto">
             <div className="heading">
                 <h1 className='text-white text-3xl font-bold text-center'>Frequently Asked Questions</h1>
