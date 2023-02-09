@@ -1,10 +1,11 @@
 import React from 'react'
+import StartedPage from './Pages/StartedPage'
 
 function UserPage() {
   return (
-    <div>
-      
-    </div>
+    <>
+        <StartedPage></StartedPage>
+    </>
   )
 }
 
