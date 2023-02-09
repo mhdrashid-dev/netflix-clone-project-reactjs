@@ -12,8 +12,8 @@ function Home() {
           </div>
           <div className="navlink">
             <ul className='flex justify-center items-center'>
-              <li className='border border-white rounded-md text-white px-2 lg:py-1 mx-3'>English</li>
-              <li className='bg-[rgba(229,9,20)] border border-[rgba(229,9,20)] rounded-md text-white px-2 lg:py-1 xl:mx-3'>Sign in</li>
+              <li className='border border-white rounded-md text-white px-2 lg:py-1 mx-3 cursor-pointer'>English</li>
+              <li className='bg-[rgba(229,9,20)] border border-[rgba(229,9,20)] rounded-md text-white px-2 lg:py-1 xl:mx-3 cursor-pointer'>Sign in</li>
             </ul>
           </div>
         </div>

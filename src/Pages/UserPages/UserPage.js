@@ -1,10 +1,12 @@
 import React from 'react'
 import StartedPage from './Pages/StartedPage'
+import ValidationPage from './Pages/ValidationPage'
 
 function UserPage() {
   return (
     <>
-        <StartedPage></StartedPage>
+        {/* <StartedPage></StartedPage> */}
+        <ValidationPage></ValidationPage>
     </>
   )
 }
