@@ -25,7 +25,7 @@ function Home() {
           </div>
           <div className="email-sec my-4 xl:my-8 xl:w-full">
             <div className='flex flex-col justify-center xl:w-full'>
-              <input className='w-full xl:w-1/2 xl:mx-auto bg-[rgba(0,0,0,.5)] border border-[#535252] rounded-md px-3 py-2 text-lg font-semibold ' type="text"  placeholder='Email address'/>
+              <input className='w-full xl:w-1/2 xl:mx-auto bg-[rgba(0,0,0,.5)] border border-[#535252] rounded-md px-3 py-2 text-lg font-semibold text-white ' type="text"  placeholder='Email address'/>
               <button className='bg-[rgba(229,9,20)] text-white w-1/2 xl:w-1/5 mx-auto my-3 py-2 rounded-md lg:text-lg lg:font-bold'>Get Started</button>
             </div>
           </div>
