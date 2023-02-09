@@ -5,7 +5,8 @@ import UserPage from './Pages/UserPages/UserPage'
 function NetflixPage() {
   return (
     <div>
-      <UserPage></UserPage>      
+      {/* <UserPage></UserPage>       */}
+      <ContentPage></ContentPage>
     </div>
   )
 }
