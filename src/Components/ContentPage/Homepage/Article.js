@@ -8,9 +8,7 @@ function Article() {
 
   let GetTrendingData=()=>{
       let randomNumber=Math.floor(Math.random()*21);
-      axios.get(`${BaseURL}${trendingKEY}`).then((response)=>{
-        console.log(response.data.results[randomNumber].original_title);    
-        console.log(response.data.results[randomNumber]);    
+      axios.get(`${BaseURL}${trendingKEY}`).then((response)=>{  
         setTrendingMovie(response.data.results[randomNumber]); 
       })
   }

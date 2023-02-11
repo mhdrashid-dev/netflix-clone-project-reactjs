@@ -6,6 +6,7 @@ import MovieGenere from '../../../Components/ContentPage/Homepage/MovieGenere'
 function HomePage() {
 
     let [genere,setGenere]=useState(['Action',"Family","Horror","Thriller","Adventure","Animation","Comedy","Drama","Crime","War","Documentry"]);
+    let generID=[28,10751,27,53,12,16,35,18,80,10752,99];
 
   return (
     <div className='w-full min-h-[100vh] bg-black relative'>
@@ -25,9 +26,9 @@ function HomePage() {
         </div>
         <div className="card-sec py-10">
             {
-                genere.map((item)=>{
+                genere.map((item,index)=>{
                     return(
-                        <MovieGenere item={item} ></MovieGenere>
+                        <MovieGenere item={item} generID={generID[index]}></MovieGenere>
                     )
                 })
             }
