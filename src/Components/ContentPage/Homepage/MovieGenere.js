@@ -34,23 +34,24 @@ function MovieGenere({item,generID}) {
         <div className="heading h-[20%]">
           <h1 className='text-white font-bold xl:text-2xl'>{item}</h1>
         </div>
-        <div className="movies-list flex justify-start items-start h-[80%] overflow-x-scroll lg:overflow-x-hidden scroll-smooth min-w-full duration-300" ref={list} style={{WebkitScrollSnapType:'0px'}}>          
+        <div className="movies-list flex justify-start relative items-start h-[80%] overflow-x-scroll lg:overflow-x-hidden  scroll-smooth min-w-full duration-300 " ref={list} >          
           {
             genere.map((item)=>{
               return(
                 <Card item={item}></Card>
               )
             })
-          }                                                    
+          }                                                          
         </div>
-        <div className="carousel-button w-full  text-white hidden lg:block">
-          <div className="previous-btn absolute top-0 left-0 h-full flex justify-center">
-            <button><i class="fa-solid fa-angles-left" onClick={ScrollLeft}></i></button>
-          </div>
-          <div className="next-btn absolute top-0 right-0  h-full flex justify-center" >
-            <button><i class="fa-solid fa-angles-right" onClick={ScrollRight}></i></button>
-          </div>
-        </div>
+          <div className="carousel-button w-full  text-white hidden lg:block h-full ">
+            <div className="previous-btn absolute top-0 left-3 h-full flex justify-center ">
+              <button className='bg-[rgba(0,0,0,.8)] px-4' style={{boxShadow:'0px 0px 30px 5px black'}}><i class="fa-solid fa-angles-left" onClick={ScrollLeft}></i></button>
+            </div>
+            <div className="next-btn absolute top-0 right-3  h-full flex justify-center" >
+              <button className='bg-[rgba(0,0,0,.8)] px-4'><i class="fa-solid fa-angles-right" onClick={ScrollRight}></i></button>
+            </div>
+          </div>   
+        
       </div>
     </div>
   )
