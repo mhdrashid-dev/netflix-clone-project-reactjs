@@ -5,8 +5,8 @@ import MoreInfoPage from './Pages/MoreInfoPage'
 function ContentPage() {
   return (
     <div>
-      {/* <HomePage></HomePage> */}
-      <MoreInfoPage></MoreInfoPage>
+      <HomePage></HomePage>
+      {/* <MoreInfoPage></MoreInfoPage> */}
     </div>
   )
 }
