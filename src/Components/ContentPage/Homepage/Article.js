@@ -34,7 +34,7 @@ function Article() {
       :
       <>
         <div className='w-full h-screen bg-black flex justify-center items-center'>
-          <div class="lds-facebook inline-block relative w-[80px] h-[80px]">
+          <div className="lds-facebook inline-block relative w-[80px] h-[80px]">
             <div className='inline-block absolute left-[8px] w-[12px] bg-[rgba(229,9,20)] animate-spinner' style={{animationDelay:'-0.24s'}}></div>
             <div className='inline-block absolute left-[32px] w-[12px] bg-[rgba(229,9,20)] animate-spinner' style={{animationDelay:'-0.12s'}}></div>
             <div className='inline-block absolute left-[56px] w-[12px] bg-[rgba(229,9,20)] animate-spinner' style={{animationDelay:'0s'}}></div>

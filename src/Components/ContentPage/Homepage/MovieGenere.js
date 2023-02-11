@@ -18,8 +18,7 @@ function MovieGenere({item,generID}) {
   }
 
   let GetGenere=()=>{
-    axios.get(`${BaseURL}${GenereID}${generID}`).then((response)=>{
-      console.log(response.data.results);
+    axios.get(`${BaseURL}${GenereID}${generID}`).then((response)=>{      
       setGenere(response.data.results);
     })
   }
@@ -36,19 +35,19 @@ function MovieGenere({item,generID}) {
         </div>
         <div className="movies-list flex justify-start relative items-start h-[80%] overflow-x-scroll lg:overflow-x-hidden  scroll-smooth min-w-full duration-300 " ref={list} >          
           {
-            genere.map((item)=>{
+            genere.map((item,key)=>{
               return(
-                <Card item={item}></Card>
+                <Card item={item} key={key}></Card>
               )
             })
           }                                                          
         </div>
           <div className="carousel-button w-full  text-white hidden lg:block h-full ">
             <div className="previous-btn absolute top-0 left-3 h-full flex justify-center ">
-              <button className='bg-[rgba(0,0,0,.8)] px-4' style={{boxShadow:'0px 0px 30px 5px black'}}><i class="fa-solid fa-angles-left" onClick={ScrollLeft}></i></button>
+              <button className='bg-[rgba(0,0,0,.8)] px-4' style={{boxShadow:'0px 0px 30px 5px black'}}><i className="fa-solid fa-angles-left" onClick={ScrollLeft}></i></button>
             </div>
             <div className="next-btn absolute top-0 right-3  h-full flex justify-center" >
-              <button className='bg-[rgba(0,0,0,.8)] px-4'><i class="fa-solid fa-angles-right" onClick={ScrollRight}></i></button>
+              <button className='bg-[rgba(0,0,0,.8)] px-4'><i className="fa-solid fa-angles-right" onClick={ScrollRight}></i></button>
             </div>
           </div>   
         

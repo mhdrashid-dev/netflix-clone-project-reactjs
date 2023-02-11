@@ -8,9 +8,8 @@ function QuestionSec() {
 
     useEffect(()=>{
         setData(QuestionJson);        
-    },[])
-    
-    console.log(data);
+    },[])    
+
 
   return (
     <div className='w-full bg-black min-h-[80vh] py-5 border-b-8 border-[#616161]'>
@@ -23,9 +22,9 @@ function QuestionSec() {
             </div>
             <div className="email-sec md:px-16 lg:px-28 xl:px-36 2xl:px-56">
                 {
-                    data.map((item)=>{
+                    data.map((item,key)=>{
                         return(
-                            <QuestionCard item={item} ></QuestionCard>
+                            <QuestionCard item={item} key={key}></QuestionCard>
                         )
                     })
                 }
