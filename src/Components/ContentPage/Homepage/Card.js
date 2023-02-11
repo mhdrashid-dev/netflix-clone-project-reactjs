@@ -1,10 +1,14 @@
 import React from 'react'
 import { imageURL } from '../../../ApiKeys/Api';
+import { useNavigate } from 'react-router-dom';
+
 
 function Card({item}) {  
 
+  let navigate=useNavigate();
+
   let MoreInfo=(item)=>{
-    console.log(item);
+    navigate('/contentpage/moreinfopage',{state:item});    
   }
 
   return (

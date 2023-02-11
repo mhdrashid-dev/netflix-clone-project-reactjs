@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function SignUp() {
   return (
@@ -16,7 +17,7 @@ function SignUp() {
             </form>
         </div>
         <div className="footer-sec">
-            <h1 className='text-[#999898] text-sm '>Already a user ? <a href="" className='text-white'>Sign in now.</a></h1>
+            <h1 className='text-[#999898] text-sm '>Already a user ? <Link to="/validation" className='text-white'>Sign in now.</Link></h1>
         </div>
       </div>
     </div>

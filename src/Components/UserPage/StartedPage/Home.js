@@ -1,8 +1,16 @@
 import React from 'react'
 import HomeBG from '../../../Images/UserpageBG.jpg'
 import Logo from '../../../Images/Logo.png'
+import { useNavigate } from 'react-router-dom'
 
 function Home() {
+
+  let navigate=useNavigate();
+
+  let GoToLoginPage=()=>{
+    navigate('/validation');
+  }
+
   return (
     <div className='w-full border-b-8 shadow-xsInset lg:shadow-lgInset border-[#616161] h-[80vh] md:h-[50vh] lg:h-[90vh] bg-homeBG' style={{background:`url("${HomeBG}")`,backgroundPosition:"center",backgroundSize:"cover"}}>       
       <div className="container mx-auto px-5 lg:px-28 xl:px-48 py-5 lg:py-10 h-full w-full">
@@ -13,7 +21,7 @@ function Home() {
           <div className="navlink">
             <ul className='flex justify-center items-center'>
               <li className='border border-white rounded-md text-white px-2 lg:py-1 mx-3 cursor-pointer'>English</li>
-              <li className='bg-[rgba(229,9,20)] border border-[rgba(229,9,20)] rounded-md text-white px-2 lg:py-1 xl:mx-3 cursor-pointer'>Sign in</li>
+              <li className='bg-[rgba(229,9,20)] border border-[rgba(229,9,20)] rounded-md text-white px-2 lg:py-1 xl:mx-3 cursor-pointer' onClick={GoToLoginPage} >Sign in</li>
             </ul>
           </div>
         </div>
@@ -26,7 +34,7 @@ function Home() {
           <div className="email-sec my-4 xl:my-8 xl:w-full">
             <div className='flex flex-col justify-center xl:w-full'>
               <input className='w-full xl:w-1/2 xl:mx-auto bg-[rgba(0,0,0,.5)] border border-[#535252] rounded-md px-3 py-2 text-lg font-semibold text-white ' type="text"  placeholder='Email address'/>
-              <button className='bg-[rgba(229,9,20)] text-white w-1/2 xl:w-1/5 mx-auto my-3 py-2 rounded-md lg:text-lg lg:font-bold'>Get Started</button>
+              <button className='bg-[rgba(229,9,20)] text-white w-1/2 xl:w-1/5 mx-auto my-3 py-2 rounded-md lg:text-lg lg:font-bold' onClick={GoToLoginPage}>Get Started</button>
             </div>
           </div>
         </div>

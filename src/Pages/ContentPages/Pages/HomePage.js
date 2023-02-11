@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Logo from '../../../Images/Logo.png'
 import Article from '../../../Components/ContentPage/Homepage/Article'
 import MovieGenere from '../../../Components/ContentPage/Homepage/MovieGenere'
 
 function HomePage() {
 
-    let [genere,setGenere]=useState(['Action',"Family","Horror","Thriller","Adventure","Animation","Comedy","Drama","Crime","War","Documentry"]);
+    let genere=['Action',"Family","Horror","Thriller","Adventure","Animation","Comedy","Drama","Crime","War","Documentry"];
     let generID=[28,10751,27,53,12,16,35,18,80,10752,99];
 
   return (
