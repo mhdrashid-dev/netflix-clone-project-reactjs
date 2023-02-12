@@ -42,12 +42,12 @@ function MovieGenere({item,generID}) {
             })
           }                                                          
         </div>
-          <div className="carousel-button w-full  text-white hidden lg:block h-full ">
-            <div className="previous-btn absolute top-0 left-3 h-full flex justify-center ">
-              <button className='bg-[rgba(0,0,0,.8)] px-4' style={{boxShadow:'0px 0px 30px 5px black'}}><i className="fa-solid fa-angles-left" onClick={ScrollLeft}></i></button>
+          <div className="carousel-button w-full  text-white hidden lg:block  ">
+            <div className="previous-btn absolute top-0 left-0 h-full flex justify-center ">
+              <button className=' px-4 text-2xl' ><i className="fa-solid fa-angles-left" onClick={ScrollLeft}></i></button>
             </div>
-            <div className="next-btn absolute top-0 right-3  h-full flex justify-center" >
-              <button className='bg-[rgba(0,0,0,.8)] px-4'><i className="fa-solid fa-angles-right" onClick={ScrollRight}></i></button>
+            <div className="next-btn absolute top-0 right-0  h-full flex justify-center" >
+              <button className=' px-4  text-2xl'><i className="fa-solid fa-angles-right" onClick={ScrollRight}></i></button>
             </div>
           </div>   
         

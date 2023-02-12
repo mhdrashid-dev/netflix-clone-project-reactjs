@@ -49,7 +49,7 @@ function Login() {
           setEmail();
           setPassword();
         }
-        console.log(errorCode);
+        
     });
 
   }

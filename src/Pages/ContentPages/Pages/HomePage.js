@@ -3,8 +3,10 @@ import Logo from '../../../Images/Logo.png'
 import Article from '../../../Components/ContentPage/Homepage/Article'
 import MovieGenere from '../../../Components/ContentPage/Homepage/MovieGenere'
 import { auth } from '../../../Firebase/Firebase'
-import { signOut } from 'firebase/auth'
+import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
+import { async } from '@firebase/util'
+
 
 function HomePage() {
 
@@ -12,22 +14,30 @@ function HomePage() {
     let genere=['Action',"Family","Horror","Thriller","Adventure","Animation","Comedy","Drama","Crime","War","Documentry"];
     let generID=[28,10751,27,53,12,16,35,18,80,10752,99];
     let navigate=useNavigate();
-    let [userName,setUserName]=useState(null);
+    let [userName,setUserName]=useState(null);    
 
     
-
+   
     let GetUserData=()=>{        
-        console.log('wow');
-        const user = auth.currentUser;
-        if (user !== null) {        
-        setUserName(user.displayName);                           
-        }
+        onAuthStateChanged(auth, async(user) => {
+            try{
+                if (user) {                            
+                    setUserName(user.displayName)
+                } else {
+                  
+                }
+            }catch(error){
 
+            }
+          });
     }
-    console.log(userName);
 
-    useEffect(()=>{
-        GetUserData();
+    useEffect(()=>{        
+        if(userName===null){
+            setTimeout(()=>{
+                GetUserData();
+            },1000)
+        }
     })
 
     let UserLogOut=()=>{        
